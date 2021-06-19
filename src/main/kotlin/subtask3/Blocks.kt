@@ -39,7 +39,7 @@ class Blocks {
 
             val calendar = GregorianCalendar.getInstance() as GregorianCalendar  // создаем календарь
             calendar.set(maxLocalDate.year, maxLocalDate.monthValue - 1, maxLocalDate.dayOfMonth) // устанавливаем дату из LocalDate
-            val dateFormat = SimpleDateFormat("dd.MM.yyyy")
+            val dateFormat = SimpleDateFormat("dd.MM.yyyy", Locale("ru"))
 
             return dateFormat.format(calendar.time)
 

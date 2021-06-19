@@ -16,7 +16,7 @@ class DateFormatter {
         if (!calendar.isLeapYear(calendar[GregorianCalendar.YEAR]) && dayInt == 29 && monthInt == 1 || dayInt > 31 || monthInt > 11 || yearInt < 0)
             return "Такого дня не существует"
 
-        val dateFormat = SimpleDateFormat("d MMMM, EEEE") // формируем данные для нашего типа
+        val dateFormat = SimpleDateFormat("d MMMM, EEEE", Locale("ru")) // формируем данные для нашего типа
         return dateFormat.format(calendar.time)
     }
 }
